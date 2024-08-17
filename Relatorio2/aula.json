@@ -1,0 +1,62 @@
+[
+    {
+        "professor": {
+            "nome": "João"
+        },
+        "assunto": "Programação Orientada a Objetos",
+        "alunos":[
+            {
+                "nome": "Wellington"
+            },
+            {
+                "nome": "Maria"
+            },
+            {
+                "nome": "José"
+            },
+            {
+                "nome": "Marcia"
+            }
+        ]
+    },
+    {
+        "professor": {
+            "nome": "Gabriel"
+        },
+        "assunto": "Banco de dados",
+        "alunos":[
+            {
+                "nome": "Carlos"
+            },
+            {
+                "nome": "Joana"
+            },
+            {
+                "nome": "Iago"
+            },
+            {
+                "nome": "Lucas"
+            }
+        ]
+    },
+    {
+        "professor": {
+            "nome": "Isabela"
+        },
+        "assunto": "Algoritmos 2",
+        "alunos":[
+            {
+                "nome": "Ana"
+            },
+            {
+                "nome": "Bruno"
+            },
+            {
+                "nome": "Bruna"
+            },
+            {
+                "nome": "Lucas"
+            }
+        ]
+    }
+]
