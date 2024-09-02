@@ -1,0 +1,50 @@
+[
+    {
+        "_id": "Cerveja",
+        "total_vendas": 12
+    },
+    {
+        "_id": "Tomate",
+        "total_vendas": 2
+    },
+    {
+        "_id": "Mortadela",
+        "total_vendas": 8
+    },
+    {
+        "_id": "Bolacha",
+        "total_vendas": 6
+    },
+    {
+        "_id": "Detergente",
+        "total_vendas": 2
+    },
+    {
+        "_id": "Macarr\u00e3o",
+        "total_vendas": 4
+    },
+    {
+        "_id": "Carne",
+        "total_vendas": 2
+    },
+    {
+        "_id": "Refrigerante",
+        "total_vendas": 4
+    },
+    {
+        "_id": "Sabonete",
+        "total_vendas": 3
+    },
+    {
+        "_id": "Ma\u00e7\u00e3",
+        "total_vendas": 3
+    },
+    {
+        "_id": "Laranja",
+        "total_vendas": 4
+    },
+    {
+        "_id": "Banana",
+        "total_vendas": 4
+    }
+]
