@@ -1,0 +1,54 @@
+Questão 1
+
+1- MATCH (m) RETURN m
+
+2- MATCH (g:Game)
+WHERE g.ano > 2012
+RETURN g.titulo as jogo, g.ano
+
+3- MATCH (g:Game{genero: "Terror"})
+RETURN g.titulo AS jogo, g.genero
+
+4- MATCH (j:Jurado)-[r:JOGOU]->(g:Game)
+WHERE r.nota >= 7
+RETURN g.titulo as nome, r.nota, j.nome
+
+Questão 2
+1- CREATE (g:Game{titulo:"Red Dead Redemption 2", genero:"Ação", ano:2018});
+CREATE (g:Game{titulo:"Hollow Knight", genero:"Metroidvania", ano:2017});
+CREATE (g:Game{titulo:"Baldur's Gate 3", genero:"RPG", ano:2023});
+CREATE (g:Game{titulo:"Hades", genero:"Roguelike", ano:2018});
+
+2- CREATE (:Jurado{nome:"Wellington"});
+CREATE (j:Jurado{nome:"Pedro"});
+CREATE (j:Jurado{nome:"Maria"});
+
+3- MATCH (g:Game{titulo:"Red Dead Redemption"}), (j:Jurado{nome:"Wellington"})
+CREATE (j)-[:JOGOU{horas:63, nota:10}]->(g);
+
+MATCH (g:Game{titulo:"Hollow Knight"}), (j:Jurado{nome:"Wellington"})
+CREATE (j)-[:JOGOU{horas:32, nota:10}]->(g);
+
+MATCH (g:Game{titulo:"Baldur's Gate 3"}), (j:Jurado{nome:"Wellington"})
+CREATE (j)-[:JOGOU{horas:123, nota:10}]->(g);
+
+MATCH (g:Game{titulo:"Hades"}), (j:Jurado{nome:"Wellington"})
+CREATE (j)-[:JOGOU{horas:27, nota:10}]->(g);
+
+MATCH (g:Game{titulo:"League of Legends"}), (j:Jurado{nome:"Wellington"})
+CREATE (j)-[:JOGOU{horas:3000, nota:5}]->(g);
+
+MATCH (g:Game{titulo:"Hades"}), (j:Jurado{nome:"Maria"})
+CREATE (j)-[:JOGOU{horas:20, nota:9}]->(g);
+
+MATCH (g:Game{titulo:"Phasmophobia"}), (j:Jurado{nome:"Maria"})
+CREATE (j)-[:JOGOU{horas:10, nota:7}]->(g);
+
+MATCH (g:Game{titulo:"Warzone"}), (j:Jurado{nome:"Maria"})
+CREATE (j)-[:JOGOU{horas:20, nota:8}]->(g);
+
+MATCH (g:Game{titulo:"Red Dead Redemption 2"}), (j:Jurado{nome:"Pedro"})
+CREATE (j)-[:JOGOU{horas:76, nota:9}]->(g);
+
+MATCH (g:Game{titulo:"Hollow Knight"}), (j:Jurado{nome:"Pedro"})
+CREATE (j)-[:JOGOU{horas:42, nota:7}]->(g);
