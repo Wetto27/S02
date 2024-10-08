@@ -1,0 +1,54 @@
+Agregação:
+
+MATCH (a:Airport)
+RETURN SUM(a.altitude) AS somaAltitude
+
+MATCH (a)-[r:HAS_ROUTE]->(b)
+RETURN MIN(r.distance) AS distanciaMin
+
+MATCH (a)-[r:HAS_ROUTE]->(b)
+RETURN MAX(r.distance) AS distanciaMax
+
+MATCH (a:Airport)-[r:HAS_ROUTE]->(b:Airport{descr:"Orlando International Airport"})
+RETURN COUNT(r) AS qtdRotasParaMCO
+
+MATCH (a:Airport)-[r:HAS_ROUTE]->(b:Airport{descr:"Los Angeles International Airport"})
+RETURN AVG(r.distance) AS mediaDistanciaParaLAX
+
+-----------------------------------------------------------------------------------------------
+
+Funções Matemáticas:
+
+MATCH (a)-[r:HAS_ROUTE]->(b)
+RETURN r.distance, SQRT(r.distance) AS raizDistancia
+
+MATCH (a:Airport)
+RETURN a.pagerank, CEIL(a.pagerank) AS rankArredCima
+
+MATCH (a:Airport)
+RETURN a.pagerank, ROUND(a.pagerank) AS rankArred
+
+MATCH (a:Airport)
+RETURN a.pagerank, FLOOR(a.pagerank) AS rankArredBaixo
+
+MATCH (a:Airport)
+RETURN a.altitude, LOG(a.altitude) AS logAltitude
+
+-----------------------------------------------------------------------------------------------
+
+Funções de String:
+
+MATCH (c:City)
+RETURN c.name, UPPER(c.name) AS upperName
+
+MATCH (c:Country)
+RETURN c.code, LOWER(c.code) AS lowerCode
+
+MATCH (a:Airport)
+RETURN a.descr, SPLIT(a.descr, ' ')
+
+MATCH (a:Airport)
+RETURN a.descr + ', ' + a.city AS concatAirportCity
+
+MATCH (a:Airport)
+RETURN a.descr, REPLACE(a.descr, "Airport", "Aeroporto") AS newDescr
